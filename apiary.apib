@@ -1323,3 +1323,33 @@ _eventId: back
             "pageContent": null
         }
 
+## Visa Checkout [/api/accounts/visaCheckout.json]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "status": "OK"
+        }
+
+
+## Visa Checkout error [/api/accounts/visaCheckout.json?mockId=error]
+### Error [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": [
+                {
+                    "type": "ERROR",
+                    "alert": [
+                        {
+                            "text": "Error visa checkout",
+                            "field": ""
+                        }
+                    ]
+                }
+            ],
+            "status": "ERROR",
+            "pageContent": null
+        }
+
