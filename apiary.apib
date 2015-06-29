@@ -1430,16 +1430,75 @@ _eventId: back
             "header": {
                 "showMenu": false
             },
-            "pageContent": [
+            "pageContent": {
+                "statementList": [
+                    {
+                        "startDate": 1429747200000,
+                        "endDate": 1430303590865
+                    }, {
+                        "startDate": 1429747200000,
+                        "endDate": 1430303590865
+                    }, {
+                        "startDate": 1429747200000,
+                        "endDate": 1430303590865
+                    }
+                ]
+            },
+            "flowExecutionUrl": "/api/accounts/checkPDF.json?mockId=error"
+        }
+
+## Check PDF valid [/api/accounts/checkPDF.json]
+### Error [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "status": "OK",
+            "pageContent": {
+                "hasErrorPDF": false
+            },
+            "flowExecutionUrl": "/api/accounts/checkPDF.json?execution=e1s1"
+        }
+
+## Check PDF no valid [/api/accounts/checkPDF.json?mockId=noPDF]
+### Error [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": [
                 {
-                    "startDate": 1429747200000,
-                    "endDate": 1430303590865
-                }, {
-                    "startDate": 1429747200000,
-                    "endDate": 1430303590865
-                }, {
-                    "startDate": 1429747200000,
-                    "endDate": 1430303590865
+                    "type": "ERROR",
+                    "alert": [
+                        {
+                            "text": "Error pdf",
+                            "field": ""
+                        }
+                    ]
                 }
-            ]
+            ],
+            "status": "OK",
+            "pageContent": {
+                "hasErrorPDF": true
+            },
+            "flowExecutionUrl": "/api/accounts/checkPDF.json?execution=e1s1"
+        }
+        
+## Check PDF error [/api/accounts/checkPDF.json?mockId=error]
+### Error [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": [
+                {
+                    "type": "ERROR",
+                    "alert": [
+                        {
+                            "text": "Error pdf",
+                            "field": ""
+                        }
+                    ]
+                }
+            ],
+            "status": "ERROR",
+            "pageContent": null,
+            "flowExecutionUrl": "/api/accounts/checkPDF.json?mockId=noPDF"
         }
