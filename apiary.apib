@@ -618,6 +618,79 @@ _eventId:
             "flowExecutionUrl": "/accounts/detail/moreRows.html?execution=e1s1"
         }
         
+## Checking account allow copy acount [/pages/account/detail.json?mockId=allowCopy]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true
+            },
+            "user": {
+                "agent": {
+                    "os": "Android"
+                }
+            },
+            "iwantto": {
+                "size": 3
+            },
+            "pageContent": {
+                "info": {
+                    "type": "CHECKING",
+                    "key":"123456789",
+                    "accountNickName":"Johnny",
+                    "accountLast4":"5566",
+                    "availableBal": 11000,
+                    "postedBal": 11000,
+                    "accountNumber": "1234567890",
+                    "routingNumber": "12321321",
+                    "allowCopyAccount": true
+                },
+                "empty": false,
+                "sortInfo": {
+                    "criteria": 0,
+                    "ascendant": true
+                },
+                "dateLimits": {
+                    "minDate": "2014-06-20",
+                    "maxDate": "2014-08-20"
+                },
+                "transactions": [
+                    {
+                        "status": "PENDING",
+                        "type": "PENDING",
+                        "date": 1426377600000,
+                        "description": "Check #3045",
+                        "amount": -400,
+                        "check": true
+                    },
+                    {
+                        "status": "PENDING",
+                        "type": "CREDIT",
+                        "date": 1420070400000,
+                        "description": "Check #304342342342342342",
+                        "amount": -30000
+                    },
+                    {
+                        "status": "POSTED",
+                        "type": "DEBIT",
+                        "date": 1427932800000,
+                        "description": "Check #42432422342343121000090923",
+                        "amount": -400,
+                        "check": true
+                    },
+                    {
+                        "status": "POSTED",
+                        "type": "DEBIT",
+                        "date": 1425081600000,
+                        "description": "Check #3042",
+                        "amount": -600
+                    }
+                ]
+            },
+            "flowExecutionUrl": "/accounts/detail/moreRows.html?execution=e1s1"
+        }
+        
 ## Accounts detail more rows [/pages/accounts/detail/moreRows.json]
 ### Valid [GET]
 + Response 200 (application/json)
