@@ -44,8 +44,35 @@ _eventId:
                "closeable": true,
                "location": "DASHBOARD"
             },
-            "iwantto": {
-                "size": 2
+            "iwantto" : {
+                "links" : [ {
+                    "external" : false,
+                    "text" : "iwant.accounts.transfer",
+                    "url" : null,
+                    "eventId" : "makeTransfer",
+                    "icon" : "transfers",
+                    "jsEvent" : null,
+                    "params" : null,
+                    "showSpinner" : true,
+                    "matEvent" : {
+                        "type" : "LOAD",
+                        "event" : "easypt"
+                    }
+                }, {
+                    "external" : false,
+                    "text" : "iwant.accounts.payment",
+                    "url" : null,
+                    "eventId" : "makePayment",
+                    "icon" : "payPeople",
+                    "jsEvent" : null,
+                    "params" : null,
+                    "showSpinner" : true,
+                    "matEvent" : {
+                        "type" : "LOAD",
+                        "event" : "makebillpay"
+                    }
+                } ],
+                "size" : 2
             },
             "pageContent": {
                 "empty": false,
@@ -559,8 +586,58 @@ _eventId:
                     "os": "Android"
                 }
             },
-            "iwantto": {
-                "size": 3
+            "iwantto" : {
+                "links" : [ {
+                  "external" : false,
+                  "text" : "iwant.accounts.query",
+                  "url" : null,
+                  "eventId" : null,
+                  "icon" : "searchDetail",
+                  "jsEvent" : "openProcessWindow",
+                  "params" : null,
+                  "showSpinner" : false,
+                  "matEvent" : {
+                    "type" : "CLICK",
+                    "event" : "txsearch"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.checking.transfer",
+                  "url" : null,
+                  "eventId" : "makeTransfer",
+                  "icon" : "transfers",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : {
+                    "type" : "LOAD",
+                    "event" : "easypt"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.alert",
+                  "url" : null,
+                  "eventId" : "setAlert",
+                  "icon" : "alert",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : {
+                    "type" : "LOAD",
+                    "event" : "alertlist"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.statements",
+                  "url" : null,
+                  "eventId" : "pdfStatement",
+                  "icon" : "showDocument",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : null
+                } ],
+                "size" : 4
             },
             "pageContent": {
                 "info": {
