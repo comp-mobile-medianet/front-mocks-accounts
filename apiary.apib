@@ -1205,6 +1205,135 @@ _eventId:
                 "size" : 4
             },
             "pageContent": {
+                "securemessageAvailable": false
+                "info": {
+                    "type": "CHECKING",
+                    "key":"123456789",
+                    "accountNickName":"Johnny",
+                    "accountLast4":"5566",
+                    "availableBal": 11000,
+                    "postedBal": 11000,
+                    "accountNumber": "00000655",
+                    "routingNumber": "113010547"
+                },
+                "empty": false,
+                "sortInfo": {
+                    "criteria": 0,
+                    "ascendant": true
+                },
+                "dateLimits": {
+                    "minDate": "2014-06-20",
+                    "maxDate": "2014-08-20"
+                },
+                "transactions": [
+                    {
+                        "status": "PENDING",
+                        "type": "PENDING",
+                        "date": 1426377600000,
+                        "description": "Check #3045",
+                        "amount": -400,
+                        "check": true
+                    },
+                    {
+                        "status": "PENDING",
+                        "type": "CREDIT",
+                        "date": 1420070400000,
+                        "description": "Check #304342342342342342",
+                        "amount": -30000
+                    },
+                    {
+                        "status": "POSTED",
+                        "type": "DEBIT",
+                        "date": 1427932800000,
+                        "description": "Check #42432422342343121000090923",
+                        "amount": -400,
+                        "check": true
+                    },
+                    {
+                        "status": "POSTED",
+                        "type": "DEBIT",
+                        "date": 1425081600000,
+                        "description": "Check #3042",
+                        "amount": -600
+                    }
+                ]
+            },
+            "flowExecutionUrl": "/accounts/detail/moreRows.html?execution=e1s1"
+        }
+        
+        
+## Checking account Secure Message Available [/pages/account/detail.json?mockId=]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "links" : [ {
+                  "rel" : "sendSecureMessage",
+                  "href" : "/sendSecureMessage/secureMessages.html"
+                } ]
+            },
+            "user": {
+                "agent": {
+                    "os": "iOs"
+                }
+            },
+            "iwantto" : {
+                "links" : [ {
+                  "external" : false,
+                  "text" : "iwant.accounts.query",
+                  "url" : null,
+                  "eventId" : null,
+                  "icon" : "searchDetail",
+                  "jsEvent" : "openProcessWindow",
+                  "params" : null,
+                  "showSpinner" : false,
+                  "matEvent" : {
+                    "type" : "CLICK",
+                    "event" : "txsearch"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.checking.transfer",
+                  "url" : null,
+                  "eventId" : "makeTransfer",
+                  "icon" : "transfers",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : {
+                    "type" : "LOAD",
+                    "event" : "easypt"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.alert",
+                  "url" : null,
+                  "eventId" : "setAlert",
+                  "icon" : "alert",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : {
+                    "type" : "LOAD",
+                    "event" : "alertlist"
+                  }
+                }, {
+                  "external" : false,
+                  "text" : "iwant.accounts.statements",
+                  "url" : null,
+                  "eventId" : "pdfStatement",
+                  "icon" : "showDocument",
+                  "jsEvent" : null,
+                  "params" : null,
+                  "showSpinner" : true,
+                  "matEvent" : null
+                } ],
+                "size" : 4
+            },
+            "pageContent": {
+                "securemessageAvailable": false,
                 "info": {
                     "type": "CHECKING",
                     "key":"123456789",
