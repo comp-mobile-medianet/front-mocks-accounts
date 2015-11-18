@@ -77,6 +77,198 @@ _eventId:
             },
             "pageContent": {
                 "empty": false,
+                "isCreditCardActivate": false,
+                "checking":{
+                    "summary": {
+                        "primaryTotalAmount": 123412.313
+                    },
+                    "accounts":[
+                        {
+                            "key":"123456789",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"Johnny",
+                            "accountLast4":"5566",
+                            "availableBal": 11000,
+                            "postedBal": 11000,
+                            "consumer": false
+                        },
+                        {
+                            "key":"234567891",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"Cuenta BBVA",
+                            "accountLast4": "1561",
+                            "availableBal": 17000,
+                            "postedBal": 11000,
+                            "consumer": true
+                        },
+                        {
+                            "key":"1222",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"Cuenta BBVA",
+                            "accountLast4": "1234",
+                            "availableBal": 17000,
+                            "postedBal": 11000,
+                            "consumer": false
+                        }
+                    ]   
+                },
+                "credit":{
+                    "summary": {
+                        "primaryTotalAmount": 3333333.33
+                    },
+                    "accounts":[
+                        {
+                            "key":"1233",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"credit BBVA ",
+                            "accountLast4": "1234",                 
+                            "currentBalance": 17000,
+                            "availableCredit": 11000,
+                            "consumer": true
+                        }
+                    ]   
+                },
+                "deposits":{
+                    "summary": {
+                        "primaryTotalAmount": 3333333.33
+                    },
+                    "accounts":[
+                        {
+                            "key":"1234",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":" blue deposit",
+                            "accountLast4": "1234",
+                            "currentBalance": 17000,
+                            "consumer": false
+                        }
+                    ]   
+                },
+                "investments":{
+                    "summary": {
+                        "primaryTotalAmount": 3333333.33
+                    },
+                    "accounts":[
+                        {
+                            "key":"1235",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"investment one",
+                            "accountLast4": "1234",                 
+                            "hasAlert": false,
+                            "totalValue": 17000,
+                            "currentBalance": 17000,
+                            "availableBalance": 11000,
+                            "consumer": true
+                        }
+                    ]   
+                },
+                "rewards":{
+                    "summary": {
+                        "primaryTotalAmount": 3333333.33
+                    },
+                    "accounts":[
+                        {
+                            "key":"1236",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":" BBVA reward ",
+                            "accountLast4": "1234",                 
+                            "hasAlert": false,              
+                            "balance": 1231.55,
+                            "number": 4,
+                            "consumer": false
+                        }
+                    ]   
+                },
+                "realestate":{
+                    "summary": {
+                        "primaryTotalAmount": 43623252.23
+                    },
+                    "accounts":[
+                        {
+                            "key":"1237",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"",
+                            "accountLast4": "1234",                 
+                            "hasAlert": false,              
+                            "cashAvailable": 2134.23,
+                            "currentBalance": 123.1,
+                            "availableCredit": 543.5,
+                            "consumer": true
+                        }
+                    ]   
+                },
+                "loans":{
+                    "summary": {
+                        "primaryTotalAmount": 62422.22
+                    },
+                    "accounts":[
+                        {
+                            "key":"1238",
+                            "description":"BBVA - Personal Checking",
+                            "accountNickName":"loan main house",
+                            "accountLast4": "1234",                 
+                            "hasAlert": false,              
+                            "payOffBalance": 1231.55,
+                            "paymentDueDate": 1382914800000,
+                            "currentPaymentDue": 2134.23,
+                            "consumer": false
+                        }
+                    ]   
+                }
+            }            
+        }
+        
+## All accounts Credit Card activate [/pages/account/list.json?mockId=creditCardActivate]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "hideBackButton": true,
+                "selectedMenuOption" : "ACCOUNTS",
+                "links" : [ {
+                  "rel" : "sendSecureMessage",
+                  "href" : "/sendSecureMessage/secureMessages.html"
+                } ]
+            },
+            "crm": {
+               "imageUrls": {
+                    "def": "css/img/imageName.png",
+                    "at2x": "css/img/imageName.@2x.png",
+                    "hdpi": "css/img/imageName.hdpi.png",
+                    "xhdpi": "css/img/imageName.xhdpi.png",
+                    "xxhdpi": "css/img/imageName.xxhdpi.png"
+                },
+               "closeable": true,
+               "location": "DASHBOARD"
+            },
+            "iwantto" : {
+                "links" : [ {
+                    "external" : false,
+                    "text" : "iwant.accounts.transfer",
+                    "eventId" : "makeTransfer",
+                    "icon" : "transfers",
+                    "showSpinner" : true,
+                    "matEvent" : {
+                        "type" : "LOAD",
+                        "event" : "easypt"
+                    }
+                }, {
+                    "external" : false,
+                    "text" : "Pay a Bill",
+                    "eventId" : "makePayment",
+                    "icon" : "payPeople",
+                    "showSpinner" : true,
+                    "matEvent" : {
+                        "type" : "LOAD",
+                        "event" : "makebillpay"
+                    }
+                } ],
+                "size" : 2
+            },
+            "pageContent": {
+                "empty": false,
+                "isCreditCardActivate": true,
                 "checking":{
                     "summary": {
                         "primaryTotalAmount": 123412.313
