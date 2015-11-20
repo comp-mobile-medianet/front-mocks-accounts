@@ -305,6 +305,7 @@ _eventId:
                     ]   
                 },
                 "credit":{
+                    "empty": true,
                     "summary": {
                         "primaryTotalAmount": 3333333.33
                     },
@@ -882,6 +883,48 @@ _eventId:
                 "size": 2
             },
             "pageContent": {
+                "type": "CREDIT",
+                "summary": {
+                    "primaryTotalAmount": 27910.47,
+                    "secondaryTotalAmount": 27910.47
+                },
+                "accounts": [
+                    {
+                        "title": "accounts.sublist.crc.title",
+                        "summary": {
+                            "primaryTotalAmount": 17000
+                        },
+                        "accounts": [
+                            {
+                                "type": "CREDIT",
+                                "key":"1233",
+                                "description":"BBVA - Personal Checking",
+                                "accountNickName":"credit BBVA ",
+                                "accountLast4": "1234",                 
+                                "currentBalance": 17000,
+                                "availableCredit": 11000
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+        
+    
+## Creditcard accounts [/pages/account/sublist.json?mockId=creditCardActivate]
+### Valid [GET]
++ Response 200 (application/json)
+
+        {
+            "header": {
+                "showMenu": true,
+                "title": "accounts.header.credit.title"
+            },
+            "iwantto": {
+                "size": 2
+            },
+            "pageContent": {
+                "creditCardActivate": true,
                 "type": "CREDIT",
                 "summary": {
                     "primaryTotalAmount": 27910.47,
